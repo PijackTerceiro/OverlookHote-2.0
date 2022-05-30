@@ -1,11 +1,17 @@
 package OverlookPackage;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 import java.util.List;
 
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "rooms")
 public class RoomList
 {
+  @XmlElement(name = "room", type = Room.class)
   private List<Room> rooms = new ArrayList<Room>();
 
   public RoomList()

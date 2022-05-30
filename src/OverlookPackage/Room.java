@@ -1,11 +1,13 @@
 package OverlookPackage;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
-
-@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "room")
 public class Room
 {
   private String roomType;
@@ -47,19 +49,19 @@ public class Room
     this.roomNum = roomNum;
   }
 
-  @XmlElement
+
   public int getPrice()
   {
     return price;
   }
 
-  @XmlElement
+
   public String getType()
   {
     return roomType;
   }
 
-  @XmlElement
+
   public boolean getIsInReservation()
   {
     return isInReservation;
@@ -70,13 +72,13 @@ public class Room
     this.isInReservation = isInReservation;
   }
 
-  @XmlElement
+
   public int getBeds()
   {
     return bedNum;
   }
 
-  @XmlElement
+
   public int getRoomNum()
   {
     return roomNum;
