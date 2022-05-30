@@ -1,20 +1,37 @@
 package OverlookPackage;
 
+import javax.xml.bind.annotation.XmlElement;
 import java.util.ArrayList;
+import java.util.List;
 
 public class RoomList
 {
-  private ArrayList<Room> rooms;
+  private List<Room> rooms = new ArrayList<Room>();
 
   public RoomList()
   {
-    rooms = new ArrayList<>();
+  }
+
+  public RoomList(List<Room> rooms)
+  {
+    this.rooms = rooms;
+  }
+
+  public List<Room> getRooms()
+  {
+    return rooms;
+  }
+
+  public void setRooms(List<Room> rooms)
+  {
+    this.rooms=rooms;
   }
 
   public void addRoom(Room room)
   {
     rooms.add(room);
   }
+
 
   public void setRoom(Room room, int index)
   {
@@ -33,11 +50,6 @@ public class RoomList
       }
     }
     return room;
-  }
-
-  public ArrayList<Room> getRooms()
-  {
-    return rooms;
   }
 
   public int getIndex(int roomNum)

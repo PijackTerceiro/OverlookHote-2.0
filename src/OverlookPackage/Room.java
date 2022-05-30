@@ -1,30 +1,28 @@
 package OverlookPackage;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
 
-public class Room implements Serializable
+@XmlRootElement
+public class Room
 {
-  private String type;
+  private String roomType;
   private int roomNum;
-  private int beds;
+  private int bedNum;
   private int price;
   private boolean isInReservation;
 
   public Room()
   {
-    type = null;
-    price = 0;
-    beds = 0;
-    roomNum = 0;
-    isInReservation = false;
   }
 
   public Room(String type, int roomNum, int beds, int price, boolean isInReservation)
   {
-    this.type = type;
+    this.roomType = type;
     this.price = price;
-    this.beds = beds;
+    this.bedNum = beds;
     this.roomNum = roomNum;
     this.isInReservation = isInReservation;
   }
@@ -36,12 +34,12 @@ public class Room implements Serializable
 
   public void setBeds(int beds)
   {
-    this.beds = beds;
+    this.bedNum = beds;
   }
 
   public void setType(String type)
   {
-    this.type = type;
+    this.roomType = type;
   }
 
   public void setRoomNum(int roomNum)
@@ -49,16 +47,19 @@ public class Room implements Serializable
     this.roomNum = roomNum;
   }
 
+  @XmlElement
   public int getPrice()
   {
     return price;
   }
 
+  @XmlElement
   public String getType()
   {
-    return type;
+    return roomType;
   }
 
+  @XmlElement
   public boolean getIsInReservation()
   {
     return isInReservation;
@@ -69,11 +70,13 @@ public class Room implements Serializable
     this.isInReservation = isInReservation;
   }
 
+  @XmlElement
   public int getBeds()
   {
-    return beds;
+    return bedNum;
   }
 
+  @XmlElement
   public int getRoomNum()
   {
     return roomNum;
@@ -82,10 +85,10 @@ public class Room implements Serializable
   @Override public String toString()
   {
     return
-        "\nType of room: " + type +
+        "\nType of room: " + roomType +
             "\nRoom number: " + roomNum +
             "\nprice: " + price +
-            "\nNumber of beds: " + beds +
+            "\nNumber of beds: " + bedNum +
             "\nHas been booked: " + isInReservation + "\n";
   }
 }

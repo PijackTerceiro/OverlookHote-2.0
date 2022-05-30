@@ -9,7 +9,10 @@ public class Test
     String fileName = "src/Resources/roomsFile.xml";
     HotelManager hotelManager = new HotelManager();
     RoomList rooms = new RoomList();
-    rooms = hotelManager.getAllRooms(fileName);
+    hotelManager.changeRoomPrice(2, 220);
+    System.out.println(hotelManager.getAllRooms(fileName));
+
+
 
   }
 }
