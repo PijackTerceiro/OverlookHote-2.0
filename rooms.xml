@@ -11,8 +11,8 @@
         <roomType>Room</roomType>
         <roomNum>2</roomNum>
         <bedNum>1</bedNum>
-        <price>200</price>
-        <isInReservation>false</isInReservation>
+        <price>210</price>
+        <isInReservation>true</isInReservation>
     </room>
     <room>
         <roomType>Room</roomType>

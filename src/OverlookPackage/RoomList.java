@@ -1,9 +1,12 @@
 package OverlookPackage;
 
+import javax.xml.bind.JAXBException;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,6 +26,7 @@ public class RoomList
     this.rooms = rooms;
   }
 
+  //method for the unmarshal
   public List<Room> getRooms()
   {
     return rooms;
@@ -38,6 +42,34 @@ public class RoomList
     rooms.add(room);
   }
 
+  //Method to retrieve all the rooms from xml
+  public List<Room> getAllRooms()
+  {
+
+    {
+      //Marshalling: Writing Java objects to XMl file
+      try
+      {
+        JAXBXMLHandler.marshal(rooms, new File("rooms.xml"));
+      }
+      catch (IOException e)
+      {
+        e.printStackTrace();
+      }
+      catch (JAXBException e)
+      {
+        e.printStackTrace();
+      }
+
+      //Unmarshalling: Converting XML content to Java objects
+      try {
+        rooms = JAXBXMLHandler.unmarshal(new File("rooms.xml"));
+      } catch (JAXBException e) {
+        e.printStackTrace();
+      }
+    }
+    return rooms;
+  }
 
   public void setRoom(Room room, int index)
   {
