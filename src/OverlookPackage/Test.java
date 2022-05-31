@@ -19,8 +19,8 @@ public class Test
     hotelManager.addExtraBed(5);
     hotelManager.setRoomAsBooked(1);
     hotelManager.addRoom(nRoom);
-    hotelManager.setRoomAsFree(1);
-    System.out.println(hotelManager.getRoomList());
+
+
 
     System.out.println("");
     System.out.println("///////////////////");
@@ -36,6 +36,7 @@ public class Test
         hotelManager.roomList.getRoomByNumber(2));
     reservationList.getReservationList().add(reservation1);
     System.out.println(reservationList.getReservationList());
+    System.out.println(hotelManager.getFreeRooms());
 
 
   }

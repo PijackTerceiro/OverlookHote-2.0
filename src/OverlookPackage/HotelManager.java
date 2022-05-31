@@ -65,7 +65,7 @@ public RoomList getFreeRooms()
   r.getRooms().clear();
   for(int i=0; i< roomList.size(); i++)
   {
-    if(roomList.getRooms().get(i).getIsInReservation() == true)
+    if(roomList.getRooms().get(i).getIsInReservation() == false)
     {
       r.aRoom(roomList.getRooms().get(i));
     }
