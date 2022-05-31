@@ -11,15 +11,15 @@
         <roomType>Room</roomType>
         <roomNum>2</roomNum>
         <bedNum>1</bedNum>
-        <price>129</price>
-        <isInReservation>false</isInReservation>
+        <price>230</price>
+        <isInReservation>true</isInReservation>
     </room>
     <room>
         <roomType>Room</roomType>
         <roomNum>3</roomNum>
         <bedNum>1</bedNum>
         <price>129</price>
-        <isInReservation>false</isInReservation>
+        <isInReservation>true</isInReservation>
     </room>
     <room>
         <roomType>Room</roomType>
@@ -31,7 +31,7 @@
     <room>
         <roomType>Room</roomType>
         <roomNum>5</roomNum>
-        <bedNum>1</bedNum>
+        <bedNum>2</bedNum>
         <price>129</price>
         <isInReservation>false</isInReservation>
     </room>
@@ -40,7 +40,7 @@
         <roomNum>6</roomNum>
         <bedNum>1</bedNum>
         <price>129</price>
-        <isInReservation>false</isInReservation>
+        <isInReservation>true</isInReservation>
     </room>
     <room>
         <roomType>Room</roomType>
@@ -61,21 +61,21 @@
         <roomNum>9</roomNum>
         <bedNum>1</bedNum>
         <price>129</price>
-        <isInReservation>false</isInReservation>
+        <isInReservation>true</isInReservation>
     </room>
     <room>
         <roomType>Room</roomType>
         <roomNum>10</roomNum>
         <bedNum>1</bedNum>
         <price>129</price>
-        <isInReservation>false</isInReservation>
+        <isInReservation>true</isInReservation>
     </room>
     <room>
         <roomType>Room</roomType>
         <roomNum>11</roomNum>
         <bedNum>1</bedNum>
         <price>129</price>
-        <isInReservation>false</isInReservation>
+        <isInReservation>true</isInReservation>
     </room>
     <room>
         <roomType>Room</roomType>
@@ -103,7 +103,7 @@
         <roomNum>40</roomNum>
         <bedNum>2</bedNum>
         <price>339</price>
-        <isInReservation>false</isInReservation>
+        <isInReservation>true</isInReservation>
     </room>
     <room>
         <roomType>Suite</roomType>
@@ -114,9 +114,9 @@
     </room>
     <room>
         <roomType>Suite</roomType>
-        <roomNum>23</roomNum>
+        <roomNum>27</roomNum>
         <bedNum>2</bedNum>
-        <price>339</price>
+        <price>345</price>
         <isInReservation>false</isInReservation>
     </room>
 </rooms>

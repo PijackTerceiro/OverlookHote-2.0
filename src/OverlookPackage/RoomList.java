@@ -21,20 +21,20 @@ public class RoomList
   public RoomList()
   {
     Room room1 = new Room("Room", 1, 1, 129, false);
-    Room room2 = new Room("Room", 2, 1, 129, false);
-    Room room3 = new Room("Room", 3, 1, 129, false);
+    Room room2 = new Room("Room", 2, 1, 129, true);
+    Room room3 = new Room("Room", 3, 1, 129, true);
     Room room4 = new Room("Room", 4, 1, 129, false);
     Room room5 = new Room("Room", 5, 1, 129, false);
-    Room room6 = new Room("Room", 6, 1, 129, false);
+    Room room6 = new Room("Room", 6, 1, 129, true);
     Room room7 = new Room("Room", 7, 1, 129, false);
     Room room8 = new Room("Room", 8, 1, 129, false);
-    Room room9 = new Room("Room", 9, 1, 129, false);
-    Room room10 = new Room("Room", 10, 1, 129, false);
-    Room room11 = new Room("Room", 11, 1, 129, false);
+    Room room9 = new Room("Room", 9, 1, 129, true);
+    Room room10 = new Room("Room", 10, 1, 129, true);
+    Room room11 = new Room("Room", 11, 1, 129, true);
     Room room12 = new Room("Room", 12, 2, 169, false);
     Room room13 = new Room("Suite", 38, 2, 339, false);
     Room room14 = new Room("Suite", 39, 2, 339, false);
-    Room room15 = new Room("Suite", 40, 2, 339, false);
+    Room room15 = new Room("Suite", 40, 2, 339, true);
     Room room16 = new Room("Suite", 41, 2, 339, false);
     rooms.add(room1);
     rooms.add(room2);
@@ -75,6 +75,11 @@ public class RoomList
   {
     rooms.add(room);
     dataWriter();
+  }
+
+  public void aRoom(Room room)
+  {
+    rooms.add(room);
   }
 
   //Method to retrieve all the rooms from xml
@@ -123,7 +128,6 @@ public class RoomList
         room = rooms.get(i);
       }
     }
-    dataWriter();
     return room;
   }
 
@@ -137,7 +141,6 @@ public class RoomList
         ind = i;
       }
     }
-    dataWriter();
     return ind;
   }
 
@@ -146,18 +149,6 @@ public class RoomList
     return rooms.size();
   }
 
-  public void setRoomIsInReservation(int roomNumber)
-  {
-    for(int i=0; i<rooms.size(); i++)
-    {
-      if(roomNumber == rooms.get(i).getRoomNum())
-      {
-        rooms.get(i).setInReservation(true);
-        dataWriter();
-        break;
-      }
-    }
-  }
 
   public String toString()
   {
