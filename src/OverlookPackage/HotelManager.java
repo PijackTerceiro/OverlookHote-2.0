@@ -54,6 +54,11 @@ public void addRoom(Room newRoom)
   roomList.addRoom(newRoom);
 }
 
+public RoomList getRoomList()
+{
+  return roomList;
+}
+
 public RoomList getFreeRooms()
 {
   RoomList r = new RoomList();
@@ -68,6 +73,7 @@ public RoomList getFreeRooms()
 
   return r;
 }
+
 
 
 }

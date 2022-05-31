@@ -6,8 +6,13 @@ public class ReservationList
 {
   //Fields
   //=======================
-  private ArrayList<Reservation> reservationList= new ArrayList<Reservation>();
+  private ArrayList<Reservation> reservationList;
+
   //=======================
+  public ReservationList()
+  {
+    this.reservationList = new ArrayList<>();
+  }
 
   //Setters
   //=======================
@@ -52,6 +57,11 @@ public class ReservationList
         return null;
     }
     return reservation;
+  }
+
+  public  ArrayList<Reservation> getReservationList()
+  {
+    return reservationList;
   }
   //=======================
 

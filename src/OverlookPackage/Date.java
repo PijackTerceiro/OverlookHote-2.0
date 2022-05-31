@@ -6,23 +6,18 @@ public class Date extends java.util.Date implements Serializable
 {
   private int day, month, year;
 
-  public Date()
-  {
-    month = month-1;
-    year = year-1900;
-  }
   public Date(int day, int month, int year)
   {
     this.day = day;
-    this.month = month-1;
-    this.year = year-1900;
+    this.month = month;
+    this.year = year;
   }
 
   public void setDate(int day, int month, int year)
   {
     this.day = day;
-    this.month = month-1;
-    this.year = year-1900;
+    this.month = month;
+    this.year = year;
   }
   public void setDay(int day)
   {
@@ -31,12 +26,12 @@ public class Date extends java.util.Date implements Serializable
 
   public void setMonth(int month)
   {
-    this.month = month-1;
+    this.month = month;
   }
 
   public void setYear(int year)
   {
-    this.year = year-1900;
+    this.year = year;
   }
 
   public int getDay()

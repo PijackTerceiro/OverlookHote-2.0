@@ -11,12 +11,7 @@ public class Test
   public static void main(String[] args)
   {
 
-    /*RoomList roomList = new RoomList();
-    Room nRoom = new Room("Suite", 23, 2, 339, false);
-    roomList.dataWriter();
-    roomList.addRoom(nRoom);
-
-    System.out.println(roomList);*/
+    //Rooms test
 
     HotelManager hotelManager = new HotelManager();
     Room nRoom = new Room("Suite", 27, 2, 345, false);
@@ -25,10 +20,22 @@ public class Test
     hotelManager.setRoomAsBooked(1);
     hotelManager.addRoom(nRoom);
     hotelManager.setRoomAsFree(1);
-    System.out.println(hotelManager.getFreeRooms());
+    System.out.println(hotelManager.getRoomList());
+
+    System.out.println("");
+    System.out.println("///////////////////");
+    System.out.println("");
 
 
+    //Reservations test
 
+    Guest guest1 = new Guest("Santiago", "Gómez", "Spanish", new Date(21,6,2002), 654055065);
+
+    ReservationList reservationList = new ReservationList();
+    Reservation reservation1 = new Reservation(guest1, new Date(6,6,2022), new Date(10,6,2022),
+        hotelManager.roomList.getRoomByNumber(2));
+    reservationList.getReservationList().add(reservation1);
+    System.out.println(reservationList.getReservationList());
 
 
   }
