@@ -21,6 +21,11 @@ public class Reservation implements Serializable
     this.room = room;
   }
 
+  public void addGuest(Guest guest)
+  {
+    guests.add(guest);
+  }
+
 
 
   /*public boolean isUnderage(Guest guest)
